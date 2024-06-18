@@ -7,7 +7,7 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
 		/>
-		<link href="css/dress-up.css" rel="stylesheet" />
+		<link href="styles.css" rel="stylesheet" />
 		<title>Dress Up</title>
 	</head>
 
@@ -37,29 +37,49 @@
 						id="saturate"
 						min="0"
 						max="100"
-					/>
-					<label for="brightness">Brightness Change: </label>
+						/>
+						<label for="brightness">Brightness Change: </label>
 					<input
 						type="range"
 						value="100"
 						id="brightness"
 						min="0"
 						max="200"
+						/>
+					</div>
+					<div id="warning">
+						<p class="text">
+							No item type selected to change filters of! Select
+							circle below.
+						</p>
+					</div>
+					<!-- BASE -->
+					<input
+						type="button"
+						value="base"
+						id="next-base"
+						onclick="itemSelector(this)"
 					/>
-				</div>
-				<div id="warning">
-					<p class="text">
-						No item type selected to change filters of! Select
-						circle below.
-					</p>
-				</div>
-				<!-- HAIR -->
-				<input
+					<input
+						type="radio"
+						value="base"
+						id="base-color"
+						name="item-color"
+						onchange="itemTypetoColor(this)"
+					/>
+					<input
+						type="button"
+						value="base"
+						id="prev-base"
+						onclick="itemSelector(this)"
+					/>
+					<!-- HAIR -->
+					<input
 					type="button"
 					value="Hair"
 					id="next-hair"
 					onclick="itemSelector(this)"
-				/>
+					/>
 				<input
 					type="radio"
 					value="hair"
@@ -91,26 +111,6 @@
 					type="button"
 					value="Top"
 					id="prev-top"
-					onclick="itemSelector(this)"
-				/>
-				<!-- BASE -->
-				<input
-					type="button"
-					value="base"
-					id="next-base"
-					onclick="itemSelector(this)"
-				/>
-				<input
-					type="radio"
-					value="base"
-					id="base-color"
-					name="item-color"
-					onchange="itemTypetoColor(this)"
-				/>
-				<input
-					type="button"
-					value="base"
-					id="prev-base"
 					onclick="itemSelector(this)"
 				/>
 				<!-- BOTTOM -->
@@ -158,18 +158,14 @@
 
 		<footer>
 			<p>
-				Credit:
+				Made by 
 				<a
-					href="https://github.com/90sPixelDev"
-					target="_blank"
-					rel="noopener noreferrer"
-					>Developer: 90sPixelDev</a
+					href="https://github.com/abckhush"
+					>Khushi Kalra</a
 				>
 				|
 				<a
 					href="https://www.etsy.com/shop/AshariaArts"
-					target="_blank"
-					rel="noopener noreferrer"
 					>Artist: AshariaArts</a
 				>
 			</p>
