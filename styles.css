@@ -275,4 +275,24 @@ input[type=range] {
   grid-area: feet-right;
   align-self: flex-start;
   margin: 0.35em 0 0 0.5em;
-}/*# sourceMappingURL=dress-up.css.map */
+}
+
+#capture-btn {
+	position: absolute;
+  padding-bottom: -80px;
+	top: 0px;
+	left: 0px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+  z-index: 2;
+}
+
+#capture-btn img {
+	width: 80px;
+	height: 80px;
+}
+
+.warn {
+	color: red;
+}
