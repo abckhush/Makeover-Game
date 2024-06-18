@@ -262,3 +262,16 @@ const itemSelector = (button) => {
 		url + charaItem + '/' + itemList[character[charaItem]] + '.png)';
 	console.table(character);
 };
+
+document.getElementById('capture-btn').addEventListener('click', () => {
+	domtoimage.toPng(document.querySelector('#game-bg'))
+		.then((dataUrl) => {
+			const link = document.createElement('a');
+			link.href = dataUrl;
+			link.download = 'Makeover_Outfit.png';
+			link.click();
+		})
+		.catch((error) => {
+			console.error('Error capturing page:', error);
+		});
+});
